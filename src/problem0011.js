@@ -225,14 +225,15 @@
 
   var largestHorizontal = getHorizontalMaxProduct(grid, 4);
   var largestVertical = getVerticalMaxProduct(grid, 4);
-  var largestDiagonal = getLeftToRightDiagonalMaxProduct(grid, 4);
-  var largestDiagonal2 = getRightToLeftDiagonalMaxProduct(grid, 4);
+  var largestDiagonalLeftToRight = getLeftToRightDiagonalMaxProduct(grid, 4);
+  var largestDiagonalRightToLeft = getRightToLeftDiagonalMaxProduct(grid, 4);
   console.log("Largest horizontal: " + largestHorizontal);
   console.log("Largest vertical: " + largestVertical);
-  console.log("Largest diagonal (left to right): " + largestDiagonal);
-  console.log("Largest diagonal (right to left): " + largestDiagonal2);
+  console.log("Largest diagonal (left to right): " + largestDiagonalLeftToRight);
+  console.log("Largest diagonal (right to left): " + largestDiagonalRightToLeft);
+  var all = [largestHorizontal, largestVertical, largestDiagonalLeftToRight, largestDiagonalRightToLeft];
 
-  var largestOfAll = Math.max.apply(Math, [largestHorizontal, largestVertical, largestDiagonal, largestDiagonal2]);
+  var largestOfAll = Math.max.apply(Math, all);
   console.log("Largest of all: " + largestOfAll);
 
 })();
